@@ -3,3 +3,9 @@
     display: flex;
     flex-wrap: wrap;
 }
+
+#display{
+    width: 100px;
+    border-style: solid;
+    border-color: pink;
+}

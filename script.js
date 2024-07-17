@@ -179,24 +179,28 @@ division.addEventListener("click", () =>{
     operator = "/";
 });
 
-firstNumberLength = equationArray.reduce((acc, curr) => {
-    if (acc.stop || typeof curr !== 'number') {
-        acc.stop = true;
-        return acc;
-    }
-    acc.length++;
-    return acc;
-}, { length: 0, stop: false }).length;
 
-firstNumber = equationArray.slice(0, acc);
 
 const output = document.querySelector("#output");
 output.addEventListener("click", () =>{
+    firstNumberLength = equationArray.reduce((acc, curr) => {
+        if (acc.stop || typeof curr !== 'number') {
+            acc.stop = true;
+            return acc;
+        }
+        acc.length++;
+        return acc;
+    }, { length: 0, stop: false }).length;
+    
+    firstNumber = equationArray.slice(0, firstNumberLength).join('');
+
+    secondNumber = equationArray.slice(firstNumberLength+1,equationArray.length).join('');
+
     if(equationArray[0] === "+" || equationArray[0] === "-" || equationArray[0] === "*" || equationArray[0] === "/"){
         display.style.color = "red";
         display.textContent = "You can't start with an operator!";
     }else{
-        display.textContent = firstNumber;
+        display.textContent = operate();
     }
 });
 

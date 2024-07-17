@@ -1,11 +1,12 @@
 #buttons{
-    width: 100px;
+    width: 80px;
     display: flex;
     flex-wrap: wrap;
 }
 
 #display{
-    width: 100px;
+    width: 80px;
     border-style: solid;
     border-color: pink;
+    display: flex;
 }

@@ -50,3 +50,5 @@ const multiplying = document.querySelector("multiplying");
 const division = document.querySelector("division");
 const output = document.querySelector("output");
 const clear = document.querySelector("clear");
+
+

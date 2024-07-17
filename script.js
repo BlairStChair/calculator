@@ -1,5 +1,11 @@
 function add(a, b){
-    return a + b;
+    let additionArray = [];
+    additionArray[0] = parseInt(a);
+    additionArray[1] = parseInt(b);
+    let sum = additionArray.reduce((accumulator, currentValue) => {
+        return accumulator + currentValue
+      },0);
+    return sum;
 }
 
 function subtract(a, b){

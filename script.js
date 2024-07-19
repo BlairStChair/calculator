@@ -102,11 +102,11 @@ addition.addEventListener("click", () =>{
             console.log(firstNumber);
             console.log(secondNumber);
             
-            const additionD = document.createElement("p");
-            additionD.classList.add("numbersClass"); 
+            // const additionD = document.createElement("p");
+            // additionD.classList.add("numbersClass"); 
              
-             additionD.textContent = "+";
-             display.appendChild(additionD);
+            //  additionD.textContent = "+";
+            //  display.appendChild(additionD);
              equationArray = [];
              equationArray[0] = result;
              equationArray.push("+");

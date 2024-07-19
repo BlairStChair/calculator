@@ -77,9 +77,12 @@ output.addEventListener("click", () =>{
     }
 });
 
+let additionD = document.createElement("p");
+
 const addition = document.querySelector("#a");
 addition.addEventListener("click", () =>{
     if(operatorClickCounter > 0){
+        display.textContent = "";
         firstNumberLength = equationArray.reduce((acc, curr) => {
             if (acc.stop || typeof curr !== 'number') {
                 acc.stop = true;
@@ -95,7 +98,10 @@ addition.addEventListener("click", () =>{
         secondNumber = parseInt(equationArray.slice(firstNumberLength + 1, equationArray.length).join(''));
     
         
-            display.textContent = firstNumber + secondNumber;
+        additionD.textContent = firstNumber + secondNumber;
+        display.appendChild(additionD);
+        
+            // display.textContent = firstNumber + secondNumber;
             result = firstNumber + secondNumber;
 
             console.log(display.textContent);
@@ -117,7 +123,6 @@ addition.addEventListener("click", () =>{
     }
     else{
         const additionD = document.createElement("p");
-        additionD.classList.add("numbersClass"); 
         additionD.textContent = "+";
         display.appendChild(additionD);
         equationArray.push("+");
@@ -251,12 +256,13 @@ eight.addEventListener("click", () =>{
 
 const nine = document.querySelector("#nine");
 nine.addEventListener("click", () =>{
+    additionD.textContent = "";
     const nineD = document.createElement("p");
-    nineD.classList.add("numbersClass"); 
     nineD.textContent = 9;
     display.appendChild(nineD);
     equationArray.push(9);
     firstNumberLength++;
+
 });
 
 const clear = document.querySelector("#clear");

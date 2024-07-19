@@ -101,18 +101,12 @@ addition.addEventListener("click", () =>{
         additionD.textContent = firstNumber + secondNumber;
         display.appendChild(additionD);
         
-            // display.textContent = firstNumber + secondNumber;
             result = firstNumber + secondNumber;
 
             console.log(display.textContent);
             console.log(firstNumber);
             console.log(secondNumber);
-            
-            // const additionD = document.createElement("p");
-            // additionD.classList.add("numbersClass"); 
-             
-            //  additionD.textContent = "+";
-            //  display.appendChild(additionD);
+
              equationArray = [];
              equationArray[0] = result;
              equationArray.push("+");

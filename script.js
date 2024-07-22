@@ -173,26 +173,100 @@ subtraction.addEventListener("click", () =>{
     }
 });
 
+let multiplyingD = document.createElement("p");
+
 const multiplying = document.querySelector("#m");
 multiplying.addEventListener("click", () =>{
-    const multiplyingD = document.createElement("p");
-    multiplyingD.classList.add("numbersClass"); 
-    multiplyingD.textContent = "*";
-    display.appendChild(multiplyingD);
-    equationArray.push("*");
-    operator = "*";
-    operatorClickCounter++;
+    if(operatorClickCounter > 0){
+        display.textContent = "";
+        firstNumberLength = equationArray.reduce((acc, curr) => {
+            if (acc.stop || typeof curr !== 'number') {
+                acc.stop = true;
+                return acc;
+            }
+            acc.length++;
+            return acc;
+        }, { length: 0, stop: false }).length;
+    
+        secondNumberLength = equationArray.length - (firstNumberLength + 1);
+        
+        firstNumber = parseInt(equationArray.slice(0, firstNumberLength).join(''));
+        secondNumber = parseInt(equationArray.slice(firstNumberLength + 1, equationArray.length).join(''));
+    
+        
+        multiplyingD.textContent = firstNumber * secondNumber;
+        display.appendChild(multiplyingD);
+        
+            result = firstNumber * secondNumber;
+
+            console.log(display.textContent);
+            console.log(firstNumber);
+            console.log(secondNumber);
+
+             equationArray = [];
+             equationArray[0] = result;
+             equationArray.push("*");
+
+
+             console.log(equationArray.toString());
+             operatorClickCounter++;
+    }
+    else{
+        const multiplyingD = document.createElement("p");
+        multiplyingD.textContent = "*";
+        display.appendChild(multiplyingD);
+        equationArray.push("*");
+        operator = "*";
+        operatorClickCounter++;
+    }
 });
+
+let divisionD = document.createElement("p");
 
 const division = document.querySelector("#d");
 division.addEventListener("click", () =>{
-    const divisionD = document.createElement("p");
-    divisionD.classList.add("numbersClass"); 
-    divisionD.textContent = "/";
-    display.appendChild(divisionD);
-    equationArray.push("/");
-    operator = "/";
-    operatorClickCounter++;
+    if(operatorClickCounter > 0){
+        display.textContent = "";
+        firstNumberLength = equationArray.reduce((acc, curr) => {
+            if (acc.stop || typeof curr !== 'number') {
+                acc.stop = true;
+                return acc;
+            }
+            acc.length++;
+            return acc;
+        }, { length: 0, stop: false }).length;
+    
+        secondNumberLength = equationArray.length - (firstNumberLength + 1);
+        
+        firstNumber = parseInt(equationArray.slice(0, firstNumberLength).join(''));
+        secondNumber = parseInt(equationArray.slice(firstNumberLength + 1, equationArray.length).join(''));
+    
+        
+        divisionD.textContent = firstNumber / secondNumber;
+        display.appendChild(divisionD);
+        
+            result = firstNumber / secondNumber;
+
+            console.log(display.textContent);
+            console.log(firstNumber);
+            console.log(secondNumber);
+
+             equationArray = [];
+             equationArray[0] = result;
+             equationArray.push("/");
+
+
+             console.log(equationArray.toString());
+             operatorClickCounter++;
+    }
+    else{
+        const divisionD = document.createElement("p");
+        divisionD.textContent = "/";
+        display.appendChild(divisionD);
+        equationArray.push("/");
+        operator = "/";
+        operatorClickCounter++;
+    }
 });
 
 const zero = document.querySelector("#zero");
@@ -287,6 +361,8 @@ eight.addEventListener("click", () =>{
 
 const nine = document.querySelector("#nine");
 nine.addEventListener("click", () =>{
+    divisionD.textContent = "";
+    multiplyingD.textContent = "";
     additionD.textContent = "";
     subtractionD.textContent = "";
     const nineD = document.createElement("p");

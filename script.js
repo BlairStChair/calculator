@@ -271,6 +271,10 @@ division.addEventListener("click", () =>{
 
 const zero = document.querySelector("#zero");
 zero.addEventListener("click", () =>{
+    divisionD.textContent = "";
+    multiplyingD.textContent = "";
+    additionD.textContent = "";
+    subtractionD.textContent = "";
     const zeroD = document.createElement("p");
     zeroD.classList.add("numbersClass"); 
     zeroD.textContent = 0;
@@ -281,6 +285,10 @@ zero.addEventListener("click", () =>{
 
 const one = document.querySelector("#one");
 one.addEventListener("click", () =>{
+    divisionD.textContent = "";
+    multiplyingD.textContent = "";
+    additionD.textContent = "";
+    subtractionD.textContent = "";
     const oneD = document.createElement("p");
     oneD.classList.add("numbersClass"); 
     oneD.textContent = 1;
@@ -291,6 +299,10 @@ one.addEventListener("click", () =>{
 
 const two = document.querySelector("#two");
 two.addEventListener("click", () =>{
+    divisionD.textContent = "";
+    multiplyingD.textContent = "";
+    additionD.textContent = "";
+    subtractionD.textContent = "";
     const twoD = document.createElement("p");
     twoD.classList.add("numbersClass"); 
     twoD.textContent = 2;
@@ -301,6 +313,10 @@ two.addEventListener("click", () =>{
 
 const three = document.querySelector("#three");
 three.addEventListener("click", () =>{
+    divisionD.textContent = "";
+    multiplyingD.textContent = "";
+    additionD.textContent = "";
+    subtractionD.textContent = "";
     const threeD = document.createElement("p");
     threeD.classList.add("numbersClass"); 
     threeD.textContent = 3;
@@ -311,6 +327,10 @@ three.addEventListener("click", () =>{
 
 const four = document.querySelector("#four");
 four.addEventListener("click", () =>{
+    divisionD.textContent = "";
+    multiplyingD.textContent = "";
+    additionD.textContent = "";
+    subtractionD.textContent = "";
     const fourD = document.createElement("p");
     fourD.classList.add("numbersClass"); 
     fourD.textContent = 4;
@@ -321,6 +341,10 @@ four.addEventListener("click", () =>{
 
 const five = document.querySelector("#five");
 five.addEventListener("click", () =>{
+    divisionD.textContent = "";
+    multiplyingD.textContent = "";
+    additionD.textContent = "";
+    subtractionD.textContent = "";
     const fiveD = document.createElement("p");
     fiveD.classList.add("numbersClass"); 
     fiveD.textContent = 5;
@@ -331,6 +355,10 @@ five.addEventListener("click", () =>{
 
 const six = document.querySelector("#six");
 six.addEventListener("click", () =>{
+    divisionD.textContent = "";
+    multiplyingD.textContent = "";
+    additionD.textContent = "";
+    subtractionD.textContent = "";
     const sixD = document.createElement("p");
     sixD.classList.add("numbersClass"); 
     sixD.textContent = 6;
@@ -341,6 +369,10 @@ six.addEventListener("click", () =>{
 
 const seven = document.querySelector("#seven");
 seven.addEventListener("click", () =>{
+    divisionD.textContent = "";
+    multiplyingD.textContent = "";
+    additionD.textContent = "";
+    subtractionD.textContent = "";
     const sevenD = document.createElement("p");
     sevenD.classList.add("numbersClass"); 
     sevenD.textContent = 7;
@@ -351,6 +383,10 @@ seven.addEventListener("click", () =>{
 
 const eight = document.querySelector("#eight");
 eight.addEventListener("click", () =>{
+    divisionD.textContent = "";
+    multiplyingD.textContent = "";
+    additionD.textContent = "";
+    subtractionD.textContent = "";
     const eightD = document.createElement("p");
     eightD.classList.add("numbersClass"); 
     eightD.textContent = 8;

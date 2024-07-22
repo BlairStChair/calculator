@@ -125,15 +125,52 @@ addition.addEventListener("click", () =>{
     }
 });
 
+let subtractionD = document.createElement("p");
+
 const subtraction = document.querySelector("#s");
 subtraction.addEventListener("click", () =>{
-    const subtractionD = document.createElement("p");
-    subtractionD.classList.add("numbersClass"); 
-    subtractionD.textContent = "-";
-    display.appendChild(subtractionD);
-    equationArray.push("-");
-    operator = "-";
-    operatorClickCounter++;
+    if(operatorClickCounter > 0){
+        display.textContent = "";
+        firstNumberLength = equationArray.reduce((acc, curr) => {
+            if (acc.stop || typeof curr !== 'number') {
+                acc.stop = true;
+                return acc;
+            }
+            acc.length++;
+            return acc;
+        }, { length: 0, stop: false }).length;
+    
+        secondNumberLength = equationArray.length - (firstNumberLength + 1);
+        
+        firstNumber = parseInt(equationArray.slice(0, firstNumberLength).join(''));
+        secondNumber = parseInt(equationArray.slice(firstNumberLength + 1, equationArray.length).join(''));
+    
+        
+        subtractionD.textContent = firstNumber - secondNumber;
+        display.appendChild(subtractionD);
+        
+            result = firstNumber - secondNumber;
+
+            console.log(display.textContent);
+            console.log(firstNumber);
+            console.log(secondNumber);
+
+             equationArray = [];
+             equationArray[0] = result;
+             equationArray.push("-");
+
+
+             console.log(equationArray.toString());
+             operatorClickCounter++;
+    }
+    else{
+        const subtractionD = document.createElement("p");
+        subtractionD.textContent = "-";
+        display.appendChild(subtractionD);
+        equationArray.push("-");
+        operator = "-";
+        operatorClickCounter++;
+    }
 });
 
 const multiplying = document.querySelector("#m");
@@ -251,6 +288,7 @@ eight.addEventListener("click", () =>{
 const nine = document.querySelector("#nine");
 nine.addEventListener("click", () =>{
     additionD.textContent = "";
+    subtractionD.textContent = "";
     const nineD = document.createElement("p");
     nineD.textContent = 9;
     display.appendChild(nineD);

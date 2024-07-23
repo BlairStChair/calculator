@@ -1,13 +1,57 @@
-#buttons{
-    width: 80px;
-    display: flex;
-    flex-wrap: wrap;
+html{
+    height: 100%;
+    background-image: url(hg68_j9wg_200706.jpg);
+    background-size: cover;
 }
 
-#display{
-    height: 50px;
-    width: 80px;
-    border-style: solid;
-    border-color: pink;
+html, body{
+    padding: 0;
+    margin: 0;
+  }
+
+body{
+    min-height: 100%;
     display: flex;
+    justify-content: center;
+    font-family: "Playwrite DK Uloopet", cursive;
+}
+
+#centerPanel{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#mainContainer{
+    background-color: white;
+}
+
+input{
+    font-family: "Playwrite DK Uloopet", cursive;
+}
+
+#row{
+    display: flex;
+    justify-content: center;
+}
+
+.numbers{
+    font-family: "Playwrite DK Uloopet", cursive;
+}
+
+#footer{
+    background-color: white;
+    color:#C9A5C9;
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px 15px;
+}
+
+a{
+    text-decoration: none;
+    color: #C9A5C9;
+}
+
+a:hover{
+    color: #C5E6EC;
 }

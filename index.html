@@ -3,31 +3,48 @@
     <head>
         <title>Calculator</title>
         <link rel="stylesheet" href="styles.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playwrite+DK+Uloopet:wght@100..400&display=swap" rel="stylesheet">
     </head>
     <body>
-        <div id="mainContainer">
-            <div class="display">
-                <input type="text" name="display" id="display">
+        <div id="rightPanel"></div>
+        <div id="centerPanel">
+            <div id="mainContainer">
+                <div class="display">
+                    <input type="text" name="display" id="display">
+                </div>
+                <div id="buttons">
+                    <div id="row">
+                        <button class="numbers" value="7">7</button>
+                        <button class="numbers" value="8">8</button>
+                        <button class="numbers" value="9">9</button>
+                        <button class="numbers" value="+">+</button>
+                    </div>
+                    <div id="row">
+                        <button class="numbers" value="4">4</button>
+                        <button class="numbers" value="5">5</button>
+                        <button class="numbers" value="6">6</button>
+                        <button class="numbers" value="-">-</button>
+                    </div>
+                    <div id="row">
+                        <button class="numbers" value="1">1</button>
+                        <button class="numbers" value="2">2</button>
+                        <button class="numbers" value="3">3</button>
+                        <button class="numbers" value="*">*</button>
+                    </div>
+                    <div id="row">
+                        <button class="numbers" value="C">C</button>
+                        <button class="numbers" value="0">0</button>
+                        <button class="numbers" value="=">=</button>
+                        <button class="numbers" value="/">/</button>
+                    </div>
+                </div>
             </div>
-            <div id="buttons">
-                <button id="seven" value="7">7</button>
-                <button id="eight" value="8">8</button>
-                <button id="nine" value="9">9</button>
-                <button id="a" value="+">+</button>
-                <button id="four" value="4">4</button>
-                <button id="five" value="5">5</button>
-                <button id="six" value="6">6</button>
-                <button id="s" value="-">-</button>
-                <button id="one" value="1">1</button>
-                <button id="two" value="2">2</button>
-                <button id="three" value="3">3</button>
-                <button id="m" value="*">*</button>
-                <button id="clear" value="C">C</button>
-                <button id="zero" value="0">0</button>
-                <button id="output" value="=">=</button>
-                <button id="d" value="/">/</button>
-            </div>
+                <script src="script2.js"></script>
+            <div id="footer"><p>Designed by <a href="https://github.com/BlairStChair">BlairStChair</a></p></div>
         </div>
-        <script src="script2.js"></script>
+        <div id="leftPanel"></div>
     </body>
 </html>

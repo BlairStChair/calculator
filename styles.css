@@ -1,3 +1,5 @@
+@import url('https://fonts.cdnfonts.com/css/alarm-clock');
+
 html{
     height: 100%;
     background-image: url(hg68_j9wg_200706.jpg);
@@ -17,26 +19,56 @@ body{
 }
 
 #centerPanel{
+    width: 20%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
 }
 
 #mainContainer{
+    height: 450px;
+    border-radius: 10px;
     background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.display{
+    display: flex;
+    padding: 20px 10px;
+    justify-content: space-around;
 }
 
 input{
-    font-family: "Playwrite DK Uloopet", cursive;
+    width: 220px;
+    font-family: 'alarm clock', sans-serif;
+    background-color: rgb(172, 206, 133);
+    color: black;
+    border-radius: 5px;
+    font-size: 60px;
+    text-align: right;
+}
+
+#solarPanel{
+    height: 35px;
+    width: 100px;
+    border-radius: 5px;
+    background-color: rgb(53, 53, 51);
 }
 
 #row{
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
+
 .numbers{
+    color: rgb(65, 65, 65);
     font-family: "Playwrite DK Uloopet", cursive;
+    font-size: 35px;
+    background-color: transparent;
+    border-style: none;
 }
 
 #footer{
@@ -44,7 +76,7 @@ input{
     color:#C9A5C9;
     border-radius: 10px;
     text-align: center;
-    padding: 10px 15px;
+    font-size: 24px;
 }
 
 a{
